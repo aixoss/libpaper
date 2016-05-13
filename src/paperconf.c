@@ -6,7 +6,9 @@
 #include <sys/param.h>
 
 #include <ctype.h>
+#ifndef _AIX51
 #include <getopt.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
