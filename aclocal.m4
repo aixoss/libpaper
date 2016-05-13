@@ -1236,7 +1236,7 @@ aix3*)
   soname_spec='${libname}${release}${shared_ext}$major'
   ;;
 
-aix4* | aix5*)
+aix4* | aix5* | aix6* | aix7*)
   version_type=linux
   need_lib_prefix=no
   need_version=no
@@ -2291,7 +2291,7 @@ lt_cv_deplibs_check_method='unknown'
 # whether `pass_all' will *always* work, you probably want this one.
 
 case $host_os in
-aix4* | aix5*)
+aix4* | aix5* | aix6* | aix7*)
   lt_cv_deplibs_check_method=pass_all
   ;;
 
@@ -2717,7 +2717,7 @@ aix3*)
   fi
   ;;
 
-aix4* | aix5*)
+aix4* | aix5* | aix6* | aix7*)
   if test "$host_cpu" != ia64 && test "$aix_use_runtimelinking" = no ; then
     test "$enable_shared" = yes && enable_static=no
   fi
@@ -2883,7 +2883,7 @@ case $host_os in
     # FIXME: insert proper C++ library support
     _LT_AC_TAGVAR(ld_shlibs, $1)=no
     ;;
-  aix4* | aix5*)
+  aix4* | aix5* | aix6* | aix7*)
     if test "$host_cpu" = ia64; then
       # On IA64, the linker does run time linking by default, so we don't
       # have to do anything special.
@@ -2896,7 +2896,7 @@ case $host_os in
       # Test if we are trying to use run time linking or normal
       # AIX style linking. If -brtl is somewhere in LDFLAGS, we
       # need to do runtime linking.
-      case $host_os in aix4.[[23]]|aix4.[[23]].*|aix5*)
+      case $host_os in aix4.[[23]]|aix4.[[23]].*|aix5* | aix6* | aix7*)
 	for ld_flag in $LDFLAGS; do
 	  case $ld_flag in
 	  *-brtl*)
@@ -3972,7 +3972,7 @@ aix3*)
     postinstall_cmds='$RANLIB $lib'
   fi
   ;;
-aix4* | aix5*)
+aix4* | aix5* | aix6* | aix7*)
   if test "$host_cpu" != ia64 && test "$aix_use_runtimelinking" = no ; then
     test "$enable_shared" = yes && enable_static=no
   fi
@@ -4887,7 +4887,7 @@ AC_MSG_CHECKING([for $compiler option to produce PIC])
     esac
   else
     case $host_os in
-      aix4* | aix5*)
+      aix4* | aix5* | aix6* | aix7*)
 	# All AIX code is PIC.
 	if test "$host_cpu" = ia64; then
 	  # AIX 5 now supports IA64 processor
@@ -5350,7 +5350,7 @@ AC_DEFUN([AC_LIBTOOL_PROG_LD_SHLIBS],
 ifelse([$1],[CXX],[
   _LT_AC_TAGVAR(export_symbols_cmds, $1)='$NM $libobjs $convenience | $global_symbol_pipe | $SED '\''s/.* //'\'' | sort | uniq > $export_symbols'
   case $host_os in
-  aix4* | aix5*)
+  aix4* | aix5* | aix6* | aix7*)
     # If we're using GNU nm, then we don't want the "-C" option.
     # -C means demangle to AIX nm, but means don't demangle with GNU nm
     if $NM -V 2>&1 | grep 'GNU' > /dev/null; then
@@ -5460,7 +5460,7 @@ ifelse([$1],[CXX],[
 
     # See if GNU ld supports shared libraries.
     case $host_os in
-    aix3* | aix4* | aix5*)
+    aix3* | aix4* | aix5* | aix6* | aix7*)
       # On AIX/PPC, the GNU linker is very broken
       if test "$host_cpu" != ia64; then
 	_LT_AC_TAGVAR(ld_shlibs, $1)=no
@@ -5671,7 +5671,7 @@ _LT_EOF
       fi
       ;;
 
-    aix4* | aix5*)
+    aix4* | aix5* | aix6* | aix7*)
       if test "$host_cpu" = ia64; then
 	# On IA64, the linker does run time linking by default, so we don't
 	# have to do anything special.
@@ -5691,7 +5691,7 @@ _LT_EOF
 	# Test if we are trying to use run time linking or normal
 	# AIX style linking. If -brtl is somewhere in LDFLAGS, we
 	# need to do runtime linking.
-	case $host_os in aix4.[[23]]|aix4.[[23]].*|aix5*)
+	case $host_os in aix4.[[23]]|aix4.[[23]].*|aix5* | aix6* | aix7*)
 	  for ld_flag in $LDFLAGS; do
   	  if (test $ld_flag = "-brtl" || test $ld_flag = "-Wl,-brtl"); then
   	    aix_use_runtimelinking=yes
